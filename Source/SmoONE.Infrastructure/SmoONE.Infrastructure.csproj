@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8A070105-4E44-4FD0-A1D0-00BE4BD8674B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SmoONE.Infrastructure</RootNamespace>
+    <AssemblyName>SmoONE.Infrastructure</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Configuration\AttendanceSchedulingConfiguration.cs" />
+    <Compile Include="Configuration\AttendanceTemplateConfiguration.cs" />
+    <Compile Include="Configuration\CostCenterConfiguration.cs" />
+    <Compile Include="Configuration\DepartmentConfiguration.cs" />
+    <Compile Include="Configuration\LeaveConfiguration.cs" />
+    <Compile Include="Configuration\RB_RowsConfiguration.cs" />
+    <Compile Include="Configuration\RB_Type_TemplateConfiguration.cs" />
+    <Compile Include="Configuration\ReimbursementConfiguration.cs" />
+    <Compile Include="DatabaseInitializer.cs" />
+    <Compile Include="IDbContext.cs" />
+    <Compile Include="IUnitOfWork.cs" />
+    <Compile Include="Migrations\201612290651353_Init.cs" />
+    <Compile Include="Migrations\201612290651353_Init.Designer.cs">
+      <DependentUpon>201612290651353_Init.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703060726029_Attendance.cs" />
+    <Compile Include="Migrations\201703060726029_Attendance.Designer.cs">
+      <DependentUpon>201703060726029_Attendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710240738119_AddGestures.cs" />
+    <Compile Include="Migrations\201710240738119_AddGestures.Designer.cs">
+      <DependentUpon>201710240738119_AddGestures.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801110211362_AddIM.cs" />
+    <Compile Include="Migrations\201801110211362_AddIM.Designer.cs">
+      <DependentUpon>201801110211362_AddIM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SmoONEDbContext.cs" />
+    <Compile Include="UnitOfWork.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SmoONE.CommLib\SmoONE.CommLib.csproj">
+      <Project>{499aee7d-c755-4857-acb9-e9caacbfef44}</Project>
+      <Name>SmoONE.CommLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SmoONE.Domain\SmoONE.Domain.csproj">
+      <Project>{46cfec3a-cece-4cf3-9a9d-75dafb5168eb}</Project>
+      <Name>SmoONE.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201612290651353_Init.resx">
+      <DependentUpon>201612290651353_Init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703060726029_Attendance.resx">
+      <DependentUpon>201703060726029_Attendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710240738119_AddGestures.resx">
+      <DependentUpon>201710240738119_AddGestures.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801110211362_AddIM.resx">
+      <DependentUpon>201801110211362_AddIM.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

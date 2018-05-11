@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{46CFEC3A-CECE-4CF3-9A9D-75DAFB5168EB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SmoONE.Domain</RootNamespace>
+    <AssemblyName>SmoONE.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entity\Attendance\AT_UserLog.cs" />
+    <Compile Include="Entity\Attendance\DailyStatistics.cs" />
+    <Compile Include="Entity\Attendance\AttendanceScheduling.cs" />
+    <Compile Include="Entity\Attendance\AttendanceLog.cs" />
+    <Compile Include="Entity\Attendance\AttendanceTemplate.cs" />
+    <Compile Include="Entity\Attendance\AT_CustomDate.cs" />
+    <Compile Include="Entity\Contact\CGroup.cs" />
+    <Compile Include="Entity\Contact\Contact.cs" />
+    <Compile Include="Entity\CostCenter\CC_Type_Template.cs" />
+    <Compile Include="Entity\CostCenter\CostCenter.cs" />
+    <Compile Include="Entity\CostCenter\CostCenter_Type.cs" />
+    <Compile Include="Entity\Leave\Leave.cs" />
+    <Compile Include="Entity\Leave\LeaveType.cs" />
+    <Compile Include="Entity\Reimbursement\RB_Rows.cs" />
+    <Compile Include="Entity\Reimbursement\RB_RType.cs" />
+    <Compile Include="Entity\Reimbursement\RB_RType_Template.cs" />
+    <Compile Include="Entity\Reimbursement\Reimbursement.cs" />
+    <Compile Include="Entity\User\Department.cs" />
+    <Compile Include="Entity\User\Log.cs" />
+    <Compile Include="Entity\User\Menu.cs" />
+    <Compile Include="Entity\User\Role.cs" />
+    <Compile Include="Entity\User\RoleMenu.cs" />
+    <Compile Include="Entity\User\User.cs" />
+    <Compile Include="Entity\User\UserRole.cs" />
+    <Compile Include="Entity\User\ValidateCode.cs" />
+    <Compile Include="IAggregateRoot.cs" />
+    <Compile Include="IEntity.cs" />
+    <Compile Include="IRepository\IAttendanceLogRepository.cs" />
+    <Compile Include="IRepository\IAttendanceSchedulingRepository.cs" />
+    <Compile Include="IRepository\IAttendanceTemplateRepository.cs" />
+    <Compile Include="IRepository\IAT_CustomDateRepository.cs" />
+    <Compile Include="IRepository\IAT_UserLogRepository.cs" />
+    <Compile Include="IRepository\ICC_Type_TemplateRepository.cs" />
+    <Compile Include="IRepository\ICGroupRepository.cs" />
+    <Compile Include="IRepository\IContactRepository.cs" />
+    <Compile Include="IRepository\ICostCenterRepository.cs" />
+    <Compile Include="IRepository\ICostCenter_TypeRepository.cs" />
+    <Compile Include="IRepository\IDailyStatisticsRepository.cs" />
+    <Compile Include="IRepository\IDepartmentRepository.cs" />
+    <Compile Include="IRepository\ILeaveRepository.cs" />
+    <Compile Include="IRepository\ILeaveTypeRepository.cs" />
+    <Compile Include="IRepository\ILogRepository.cs" />
+    <Compile Include="IRepository\IMenuRepository.cs" />
+    <Compile Include="IRepository\IMonthlyResultRepository.cs" />
+    <Compile Include="IRepository\IMonthlyStatisticsRepository.cs" />
+    <Compile Include="IRepository\IRB_RowsRepository.cs" />
+    <Compile Include="IRepository\IRB_TypeRepository.cs" />
+    <Compile Include="IRepository\IRB_Type_TemplateRepository.cs" />
+    <Compile Include="IRepository\IReimbursementRepository.cs" />
+    <Compile Include="IRepository\IRepository.cs" />
+    <Compile Include="IRepository\IRoleMenuRepository.cs" />
+    <Compile Include="IRepository\IRoleRepository.cs" />
+    <Compile Include="IRepository\IUserRepository.cs" />
+    <Compile Include="IRepository\IUserRoleRepository.cs" />
+    <Compile Include="IRepository\IValidateCodeRepository.cs" />
+    <Compile Include="Entity\Attendance\MonthlyStatistics.cs" />
+    <Compile Include="Entity\Attendance\MonthlyResult.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SmoONE.DTOs\SmoONE.DTOs.csproj">
+      <Project>{2a78fa6d-c3dc-4a69-8b4c-c9271a42c8e0}</Project>
+      <Name>SmoONE.DTOs</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
