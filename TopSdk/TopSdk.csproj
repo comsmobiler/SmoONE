@@ -1,0 +1,326 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9C11CAE5-5188-4E71-825B-68FC3135728A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Top.Api</RootNamespace>
+    <AssemblyName>TopSdk</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="BaseTopRequest.cs" />
+    <Compile Include="DingTalk\IDingTalkClient.cs" />
+    <Compile Include="DingTalk\IDingTalkRequest.cs" />
+    <Compile Include="DingTalk\DefaultDingTalkClient.cs" />
+    <Compile Include="DingTalk\DingTalkResponse.cs" />
+    <Compile Include="DingTalk\BaseDingTalkRequest.cs" />
+    <Compile Include="TopException.cs" />
+    <Compile Include="ITopRequest.cs" />
+    <Compile Include="TopBatchResponse.cs" />
+    <Compile Include="TopDictionary.cs" />
+    <Compile Include="AutoRetryTopClient.cs" />
+    <Compile Include="Security\SecurityClient.cs" />
+    <Compile Include="Security\SecretException.cs" />
+    <Compile Include="Security\SecretContext.cs" />
+    <Compile Include="Security\SecurityBiz.cs" />
+    <Compile Include="Security\SecurityCounter.cs" />
+    <Compile Include="Security\SecurityConstants.cs" />
+    <Compile Include="Security\SecurityCore.cs" />
+    <Compile Include="Security\TopSecretGetRequest.cs" />
+    <Compile Include="Security\TopSecretGetResponse.cs" />
+    <Compile Include="Security\ErrorUtil.cs" />
+    <Compile Include="Security\SecretData.cs" />
+    <Compile Include="ITopLogger.cs" />
+    <Compile Include="Parser\TopSimplifyJsonReader.cs" />
+    <Compile Include="Parser\QimenXmlParser.cs" />
+    <Compile Include="Parser\TopJsonReader.cs" />
+    <Compile Include="Parser\TopJsonParser.cs" />
+    <Compile Include="Parser\TopAttribute.cs" />
+    <Compile Include="Parser\ITopParser.cs" />
+    <Compile Include="Parser\TopXmlParser.cs" />
+    <Compile Include="Parser\TopSimplifyJsonParser.cs" />
+    <Compile Include="Parser\ITopReader.cs" />
+    <Compile Include="BatchTopClient.cs" />
+    <Compile Include="Report\ApiReporter.cs" />
+    <Compile Include="Report\TopSdkFeedbackUploadResponse.cs" />
+    <Compile Include="Report\TopSdkFeedbackUploadRequest.cs" />
+    <Compile Include="DefaultTopLogger.cs" />
+    <Compile Include="ClusterTopClient.cs" />
+    <Compile Include="DefaultTopClient.cs" />
+    <Compile Include="ITopUploadRequest.cs" />
+    <Compile Include="Cluster\ClusterManager.cs" />
+    <Compile Include="Cluster\DnsConfig.cs" />
+    <Compile Include="Aliyun\IAliyunClient.cs" />
+    <Compile Include="Aliyun\IAliyunRequest.cs" />
+    <Compile Include="Aliyun\Parser\AliyunJsonReader.cs" />
+    <Compile Include="Aliyun\Parser\IAliyunParser.cs" />
+    <Compile Include="Aliyun\Parser\AliyunXmlParser.cs" />
+    <Compile Include="Aliyun\Parser\AliyunJsonParser.cs" />
+    <Compile Include="Aliyun\AliyunResponse.cs" />
+    <Compile Include="Aliyun\DefaultAliyunClient.cs" />
+    <Compile Include="Aliyun\Util\AliyunWebUtils.cs" />
+    <Compile Include="Aliyun\IAliyunUploadRequest.cs" />
+    <Compile Include="Qimen\DefaultQimenClient.cs" />
+    <Compile Include="Qimen\QimenResponse.cs" />
+    <Compile Include="Qimen\IQimenClient.cs" />
+    <Compile Include="Qimen\QimenRequest.cs" />
+    <Compile Include="Generated\FastJson\JsonSerializer.cs" />
+    <Compile Include="Generated\FastJson\Getters.cs" />
+    <Compile Include="Generated\FastJson\SafeDictionary.cs" />
+    <Compile Include="Generated\FastJson\Reflection.cs" />
+    <Compile Include="Generated\FastJson\dynamic.cs" />
+    <Compile Include="Generated\FastJson\Formatter.cs" />
+    <Compile Include="Generated\FastJson\JSON.cs" />
+    <Compile Include="Generated\FastJson\JsonParser.cs" />
+    <Compile Include="Generated\TopLink\LinkException.cs" />
+    <Compile Include="Generated\TopLink\Endpoints\MessageType.cs" />
+    <Compile Include="Generated\TopLink\Endpoints\EndpointContext.cs" />
+    <Compile Include="Generated\TopLink\Endpoints\EndpointProxy.cs" />
+    <Compile Include="Generated\TopLink\Endpoints\SimpleIdentity.cs" />
+    <Compile Include="Generated\TopLink\Endpoints\SendCallback.cs" />
+    <Compile Include="Generated\TopLink\Endpoints\AckMessageArgs.cs" />
+    <Compile Include="Generated\TopLink\Endpoints\MessageIO.cs" />
+    <Compile Include="Generated\TopLink\Endpoints\Identity.cs" />
+    <Compile Include="Generated\TopLink\Endpoints\EndpointHandler.cs" />
+    <Compile Include="Generated\TopLink\Endpoints\Message.cs" />
+    <Compile Include="Generated\TopLink\Endpoints\Endpoint.cs" />
+    <Compile Include="Generated\TopLink\ResetableTimer.cs" />
+    <Compile Include="Generated\TopLink\Channel\ChannelContext.cs" />
+    <Compile Include="Generated\TopLink\Channel\ServerChannel.cs" />
+    <Compile Include="Generated\TopLink\Channel\ChannelClosedEventArg.cs" />
+    <Compile Include="Generated\TopLink\Channel\IClientChannelSelector.cs" />
+    <Compile Include="Generated\TopLink\Channel\TCP\TcpServerChannelSender.cs" />
+    <Compile Include="Generated\TopLink\Channel\TCP\TcpServerChannel.cs" />
+    <Compile Include="Generated\TopLink\Channel\ChannelException.cs" />
+    <Compile Include="Generated\TopLink\Channel\ClientChannelSharedSelector.cs" />
+    <Compile Include="Generated\TopLink\Channel\IClientChannel.cs" />
+    <Compile Include="Generated\TopLink\Channel\IChannelSender.cs" />
+    <Compile Include="Generated\TopLink\Channel\IServerChannelSender.cs" />
+    <Compile Include="Generated\TopLink\Channel\WebSocket\WebSocketClientChannel.cs" />
+    <Compile Include="Generated\TopLink\Channel\WebSocket\WebSocketClient.cs" />
+    <Compile Include="Generated\TopLink\Channel\WebSocket\WebSocketClientHelper.cs" />
+    <Compile Include="Generated\TopLink\Text.cs" />
+    <Compile Include="Generated\TopLink\Util\GZIPHelper.cs" />
+    <Compile Include="Generated\SharpZipLib\Encryption\ZipAESTransform.cs" />
+    <Compile Include="Generated\SharpZipLib\Encryption\ZipAESStream.cs" />
+    <Compile Include="Generated\SharpZipLib\Encryption\PkzipClassic.cs" />
+    <Compile Include="Generated\SharpZipLib\SharpZipBaseException.cs" />
+    <Compile Include="Generated\SharpZipLib\Checksums\Adler32.cs" />
+    <Compile Include="Generated\SharpZipLib\Checksums\IChecksum.cs" />
+    <Compile Include="Generated\SharpZipLib\Checksums\StrangeCRC.cs" />
+    <Compile Include="Generated\SharpZipLib\Checksums\CRC32.cs" />
+    <Compile Include="Generated\SharpZipLib\Core\WindowsPathUtils.cs" />
+    <Compile Include="Generated\SharpZipLib\Core\PathFilter.cs" />
+    <Compile Include="Generated\SharpZipLib\Core\StreamUtils.cs" />
+    <Compile Include="Generated\SharpZipLib\Core\NameFilter.cs" />
+    <Compile Include="Generated\SharpZipLib\Core\INameTransform.cs" />
+    <Compile Include="Generated\SharpZipLib\Core\FileSystemScanner.cs" />
+    <Compile Include="Generated\SharpZipLib\Core\IScanFilter.cs" />
+    <Compile Include="Generated\SharpZipLib\Zip\ZipException.cs" />
+    <Compile Include="Generated\SharpZipLib\Zip\ZipEntry.cs" />
+    <Compile Include="Generated\SharpZipLib\Zip\FastZip.cs" />
+    <Compile Include="Generated\SharpZipLib\Zip\ZipExtraData.cs" />
+    <Compile Include="Generated\SharpZipLib\Zip\ZipInputStream.cs" />
+    <Compile Include="Generated\SharpZipLib\Zip\ZipNameTransform.cs" />
+    <Compile Include="Generated\SharpZipLib\Zip\IEntryFactory.cs" />
+    <Compile Include="Generated\SharpZipLib\Zip\ZipFile.cs" />
+    <Compile Include="Generated\SharpZipLib\Zip\WindowsNameTransform.cs" />
+    <Compile Include="Generated\SharpZipLib\Zip\ZipConstants.cs" />
+    <Compile Include="Generated\SharpZipLib\Zip\ZipOutputStream.cs" />
+    <Compile Include="Generated\SharpZipLib\Zip\ZipHelperStream.cs" />
+    <Compile Include="Generated\SharpZipLib\Zip\Compression\Deflater.cs" />
+    <Compile Include="Generated\SharpZipLib\Zip\Compression\DeflaterHuffman.cs" />
+    <Compile Include="Generated\SharpZipLib\Zip\Compression\DeflaterEngine.cs" />
+    <Compile Include="Generated\SharpZipLib\Zip\Compression\Inflater.cs" />
+    <Compile Include="Generated\SharpZipLib\Zip\Compression\InflaterHuffmanTree.cs" />
+    <Compile Include="Generated\SharpZipLib\Zip\Compression\InflaterDynHeader.cs" />
+    <Compile Include="Generated\SharpZipLib\Zip\Compression\DeflaterPending.cs" />
+    <Compile Include="Generated\SharpZipLib\Zip\Compression\DeflaterConstants.cs" />
+    <Compile Include="Generated\SharpZipLib\Zip\Compression\Streams\DeflaterOutputStream.cs" />
+    <Compile Include="Generated\SharpZipLib\Zip\Compression\Streams\OutputWindow.cs" />
+    <Compile Include="Generated\SharpZipLib\Zip\Compression\Streams\InflaterInputStream.cs" />
+    <Compile Include="Generated\SharpZipLib\Zip\Compression\Streams\StreamManipulator.cs" />
+    <Compile Include="Generated\SharpZipLib\Zip\Compression\PendingBuffer.cs" />
+    <Compile Include="Generated\SharpZipLib\Zip\ZipEntryFactory.cs" />
+    <Compile Include="Generated\Remoting\ProtocolStreamHandle.cs" />
+    <Compile Include="Generated\Remoting\HTTP\HttpHeader.cs" />
+    <Compile Include="Generated\Remoting\HTTP\HttpProtocolHandle.cs" />
+    <Compile Include="Generated\Remoting\TCP\TcpProtocolHandle.cs" />
+    <Compile Include="Generated\Remoting\TCP\TcpProtocolFlags.cs" />
+    <Compile Include="Generated\Remoting\TCP\TcpTransportHeader.cs" />
+    <Compile Include="Generated\Remoting\MessageHeader.cs" />
+    <Compile Include="Generated\WebSocket\MessageEventArgs.cs" />
+    <Compile Include="Generated\WebSocket\SynchronizedCollection.cs" />
+    <Compile Include="Generated\WebSocket\Ext.cs" />
+    <Compile Include="Generated\WebSocket\WsStream.cs" />
+    <Compile Include="Generated\WebSocket\WebSocket.cs" />
+    <Compile Include="Generated\WebSocket\ByteOrder.cs" />
+    <Compile Include="Generated\WebSocket\CloseEventArgs.cs" />
+    <Compile Include="Generated\WebSocket\WsState.cs" />
+    <Compile Include="Generated\WebSocket\Handshake.cs" />
+    <Compile Include="Generated\WebSocket\Server\WebSocketServerBase.cs" />
+    <Compile Include="Generated\WebSocket\Server\WebSocketService.cs" />
+    <Compile Include="Generated\WebSocket\Server\IServiceHost.cs" />
+    <Compile Include="Generated\WebSocket\Server\HttpServer.cs" />
+    <Compile Include="Generated\WebSocket\Server\WebSocketServer.cs" />
+    <Compile Include="Generated\WebSocket\Server\WebSocketServiceHost.cs" />
+    <Compile Include="Generated\WebSocket\Server\ResponseEventArgs.cs" />
+    <Compile Include="Generated\WebSocket\Server\ServiceManager.cs" />
+    <Compile Include="Generated\WebSocket\Server\SessionManager.cs" />
+    <Compile Include="Generated\WebSocket\RequestHandshake.cs" />
+    <Compile Include="Generated\WebSocket\WsReceivedTooBigMessageException.cs" />
+    <Compile Include="Generated\WebSocket\Frame\Mask.cs" />
+    <Compile Include="Generated\WebSocket\Frame\WsFrame.cs" />
+    <Compile Include="Generated\WebSocket\Frame\Opcode.cs" />
+    <Compile Include="Generated\WebSocket\Frame\CloseStatusCode.cs" />
+    <Compile Include="Generated\WebSocket\Frame\PayloadData.cs" />
+    <Compile Include="Generated\WebSocket\Frame\Rsv.cs" />
+    <Compile Include="Generated\WebSocket\Frame\Fin.cs" />
+    <Compile Include="Generated\WebSocket\ResponseHandshake.cs" />
+    <Compile Include="Generated\WebSocket\Net\Cookie.cs" />
+    <Compile Include="Generated\WebSocket\Net\WebHeaderCollection.cs" />
+    <Compile Include="Generated\WebSocket\Net\ListenerAsyncResult.cs" />
+    <Compile Include="Generated\WebSocket\Net\CookieCollection.cs" />
+    <Compile Include="Generated\WebSocket\Net\ChunkedInputStream.cs" />
+    <Compile Include="Generated\WebSocket\Net\HttpUtility.cs" />
+    <Compile Include="Generated\WebSocket\Net\ListenerPrefix.cs" />
+    <Compile Include="Generated\WebSocket\Net\AuthenticationSchemes.cs" />
+    <Compile Include="Generated\WebSocket\Net\CookieException.cs" />
+    <Compile Include="Generated\WebSocket\Net\RequestStream.cs" />
+    <Compile Include="Generated\WebSocket\Net\HttpListenerRequest.cs" />
+    <Compile Include="Generated\WebSocket\Net\Security\SslStream.cs" />
+    <Compile Include="Generated\WebSocket\Net\AuthenticationSchemeSelector.cs" />
+    <Compile Include="Generated\WebSocket\Net\HttpStatusCode.cs" />
+    <Compile Include="Generated\WebSocket\Net\EndPointManager.cs" />
+    <Compile Include="Generated\WebSocket\Net\Sockets\TcpListenerWebSocketContext.cs" />
+    <Compile Include="Generated\WebSocket\Net\HttpListenerWebSocketContext.cs" />
+    <Compile Include="Generated\WebSocket\Net\HttpListenerPrefixCollection.cs" />
+    <Compile Include="Generated\WebSocket\Net\EndPointListener.cs" />
+    <Compile Include="Generated\WebSocket\Net\HttpListenerContext.cs" />
+    <Compile Include="Generated\WebSocket\Net\ResponseStream.cs" />
+    <Compile Include="Generated\WebSocket\Net\HttpListenerException.cs" />
+    <Compile Include="Generated\WebSocket\Net\ChunkStream.cs" />
+    <Compile Include="Generated\WebSocket\Net\HttpConnection.cs" />
+    <Compile Include="Generated\WebSocket\Net\HttpListenerResponse.cs" />
+    <Compile Include="Generated\WebSocket\Net\HttpListener.cs" />
+    <Compile Include="Generated\WebSocket\Net\WebSocketContext.cs" />
+    <Compile Include="Generated\WebSocket\Net\HttpVersion.cs" />
+    <Compile Include="Generated\WebSocket\Net\HttpStreamAsyncResult.cs" />
+    <Compile Include="Generated\WebSocket\ErrorEventArgs.cs" />
+    <Compile Include="ITopClient.cs" />
+    <Compile Include="Util\CountDownLatch.cs" />
+    <Compile Include="Util\XmlWriter.cs" />
+    <Compile Include="Util\WebUtils.cs" />
+    <Compile Include="Util\StringUtil.cs" />
+    <Compile Include="Util\RequestValidator.cs" />
+    <Compile Include="Util\FileItem.cs" />
+    <Compile Include="Util\TopUtils.cs" />
+    <Compile Include="Util\SecurityUtil.cs" />
+    <Compile Include="Util\AtsUtils.cs" />
+    <Compile Include="Util\SpiUtils.cs" />
+    <Compile Include="AutoRetryClusterTopClient.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="TopBatchRequest.cs" />
+    <Compile Include="Tmc\MessageFields.cs" />
+    <Compile Include="Tmc\MessageArgs.cs" />
+    <Compile Include="Tmc\Message.cs" />
+    <Compile Include="Tmc\MessageKind.cs" />
+    <Compile Include="Tmc\TmcClient.cs" />
+    <Compile Include="Tmc\TmcIdentity.cs" />
+    <Compile Include="TopObject.cs" />
+    <Compile Include="TopResponse.cs" />
+    <Compile Include="Domain\BizResult.cs" />
+    <Compile Include="Domain\Subtask.cs" />
+    <Compile Include="Domain\Area.cs" />
+    <Compile Include="Domain\Task.cs" />
+    <Compile Include="Domain\KfcSearchResult.cs" />
+    <Compile Include="Request\TopSecretRegisterRequest.cs" />
+    <Compile Include="Request\AlibabaAliqinFcIotRechargeCardRequest.cs" />
+    <Compile Include="Request\KfcKeywordSearchRequest.cs" />
+    <Compile Include="Request\AlibabaAliqinFcTtsNumSinglecallRequest.cs" />
+    <Compile Include="Request\AlibabaAliqinFcVoiceNumSinglecallRequest.cs" />
+    <Compile Include="Request\AlibabaAliqinFcFlowChargeProvinceRequest.cs" />
+    <Compile Include="Request\AlibabaAliqinFcVoiceNumDoublecallRequest.cs" />
+    <Compile Include="Request\TopIpoutGetRequest.cs" />
+    <Compile Include="Request\TopAuthTokenRefreshRequest.cs" />
+    <Compile Include="Request\TopatsTaskDeleteRequest.cs" />
+    <Compile Include="Request\AlibabaAliqinFcSmsNumSendRequest.cs" />
+    <Compile Include="Request\TopAuthTokenCreateRequest.cs" />
+    <Compile Include="Request\TopSdkFeedbackUploadRequest.cs" />
+    <Compile Include="Request\AlibabaAliqinFcSmsNumQueryRequest.cs" />
+    <Compile Include="Request\AlibabaAliqinFcFlowChargeRequest.cs" />
+    <Compile Include="Request\AppipGetRequest.cs" />
+    <Compile Include="Request\AlibabaAliqinFcFlowQueryRequest.cs" />
+    <Compile Include="Request\AlibabaAliqinFcFlowGradeRequest.cs" />
+    <Compile Include="Request\TopSecretGetRequest.cs" />
+    <Compile Include="Request\HttpdnsGetRequest.cs" />
+    <Compile Include="Request\TopatsResultGetRequest.cs" />
+    <Compile Include="Request\AreasGetRequest.cs" />
+    <Compile Include="Request\AlibabaAliqinFcIotQrycardRequest.cs" />
+    <Compile Include="Request\TimeGetRequest.cs" />
+    <Compile Include="Response\TopSecretRegisterResponse.cs" />
+    <Compile Include="Response\AlibabaAliqinFcIotRechargeCardResponse.cs" />
+    <Compile Include="Response\KfcKeywordSearchResponse.cs" />
+    <Compile Include="Response\AlibabaAliqinFcTtsNumSinglecallResponse.cs" />
+    <Compile Include="Response\AlibabaAliqinFcVoiceNumSinglecallResponse.cs" />
+    <Compile Include="Response\AlibabaAliqinFcFlowChargeProvinceResponse.cs" />
+    <Compile Include="Response\AlibabaAliqinFcVoiceNumDoublecallResponse.cs" />
+    <Compile Include="Response\TopIpoutGetResponse.cs" />
+    <Compile Include="Response\TopAuthTokenRefreshResponse.cs" />
+    <Compile Include="Response\TopatsTaskDeleteResponse.cs" />
+    <Compile Include="Response\AlibabaAliqinFcSmsNumSendResponse.cs" />
+    <Compile Include="Response\TopAuthTokenCreateResponse.cs" />
+    <Compile Include="Response\TopSdkFeedbackUploadResponse.cs" />
+    <Compile Include="Response\AlibabaAliqinFcSmsNumQueryResponse.cs" />
+    <Compile Include="Response\AlibabaAliqinFcFlowChargeResponse.cs" />
+    <Compile Include="Response\AppipGetResponse.cs" />
+    <Compile Include="Response\AlibabaAliqinFcFlowQueryResponse.cs" />
+    <Compile Include="Response\AlibabaAliqinFcFlowGradeResponse.cs" />
+    <Compile Include="Response\TopSecretGetResponse.cs" />
+    <Compile Include="Response\HttpdnsGetResponse.cs" />
+    <Compile Include="Response\TopatsResultGetResponse.cs" />
+    <Compile Include="Response\AreasGetResponse.cs" />
+    <Compile Include="Response\AlibabaAliqinFcIotQrycardResponse.cs" />
+    <Compile Include="Response\TimeGetResponse.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
