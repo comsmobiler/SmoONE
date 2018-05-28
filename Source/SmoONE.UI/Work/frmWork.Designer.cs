@@ -57,7 +57,7 @@ namespace SmoONE.UI.Work
             this.title1.Name = "title1";
             this.title1.Padding = new Smobiler.Core.Controls.Padding(10F, 0F, 0F, 0F);
             this.title1.ResourceID = "list-ul";
-            this.title1.Size = new System.Drawing.Size(100, 50);
+            this.title1.Size = new System.Drawing.Size(0, 50);
             this.title1.Text = "นคื๗";
             this.title1.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.title1.ImagePress += new System.EventHandler(this.title1_ImagePress);
@@ -77,11 +77,10 @@ namespace SmoONE.UI.Work
             this.toolBar1.Items.AddRange(new Smobiler.Core.Controls.ToolBarItem[] {
             toolBarItem1,
             toolBarItem2});
-            this.toolBar1.Location = new System.Drawing.Point(91, 373);
             this.toolBar1.MessageFontSize = 10;
             this.toolBar1.MessageForeColor = System.Drawing.Color.White;
             this.toolBar1.Name = "toolBar1";
-            this.toolBar1.Size = new System.Drawing.Size(100, 50);
+            this.toolBar1.Size = new System.Drawing.Size(0, 50);
             this.toolBar1.ToolbarItemClick += new Smobiler.Core.Controls.ToolbarItemClickEventHandler(this.toolBar1_ToolbarItemClick);
             // 
             // spContent
@@ -89,11 +88,10 @@ namespace SmoONE.UI.Work
             this.spContent.Controls.AddRange(new Smobiler.Core.Controls.MobileControl[] {
             this.iconMenuData,
             this.plTabBar});
-            this.spContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.spContent.Location = new System.Drawing.Point(74, 112);
+            this.spContent.Flex = 1;
             this.spContent.Name = "spContent";
             this.spContent.Scrollable = true;
-            this.spContent.Size = new System.Drawing.Size(100, 30);
+            this.spContent.Size = new System.Drawing.Size(0, 0);
             // 
             // iconMenuData
             // 
@@ -230,10 +228,11 @@ namespace SmoONE.UI.Work
             this.ActionButton.OffsetY = 50;
             this.Controls.AddRange(new Smobiler.Core.Controls.MobileControl[] {
             this.title1,
-            this.toolBar1,
-            this.spContent});
+            this.spContent,
+            this.toolBar1});
             this.DrawerName = "SmoONE.UI.Layout.LeftPage";
             this.DrawerWidth = 260;
+            this.Layout = Smobiler.Core.Controls.LayoutPosition.Relative;
             this.Orientation = Smobiler.Core.Controls.FormOrientation.Portrait;
             this.KeyDown += new Smobiler.Core.Controls.KeyDownEventHandler(this.frmWork_KeyDown);
             this.ActionButtonPress += new Smobiler.Core.Controls.ActionButtonPressEventHandler(this.frmWork_ActionButtonPress);
