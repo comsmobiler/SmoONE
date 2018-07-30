@@ -18,8 +18,10 @@ namespace SmoONE.UI.Im
         /// <summary>
         /// appKey和appSecret请去融云注册应用：http://www.rongcloud.cn/
         /// </summary>
-        string key = "****";//融云应用KEY
-        string secret = "****";//融云应用Secret
+        //string key = "vnroth0kv4vco";//融云应用key
+        //string secret = "9iWyaASK1q";//融云应用secret
+        string key = "mgb7ka1nmfakg";//融云应用KEY
+        string secret = "veGBTi0lzt";//融云应用Secret
 
         #endregion
 

@@ -36,10 +36,10 @@ namespace SmoONE.Infrastructure
             //            new DropCreateDatabaseIfModelChanges<SmoONEDbContext>());
             //}
             //自动创建更新数据库和表,产生系统表
+            //Database.SetInitializer<SmoONEDbContext>(null);
             Database.SetInitializer<SmoONEDbContext>(
                     new DropCreateDatabaseIfModelChanges<SmoONEDbContext>());
-            this.Configuration.LazyLoadingEnabled = false; 
-
+            this.Configuration.LazyLoadingEnabled = false;
         }
 
         /// <summary>

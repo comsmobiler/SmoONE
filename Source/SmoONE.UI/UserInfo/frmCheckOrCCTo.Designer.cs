@@ -40,8 +40,6 @@ namespace SmoONE.UI.UserInfo
             this.title1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.title1.Direction = Smobiler.Core.Controls.LayoutDirection.Row;
             this.title1.Dock = System.Windows.Forms.DockStyle.Top;
-            
-            
             this.title1.Location = new System.Drawing.Point(74, 53);
             this.title1.Name = "title1";
             this.title1.Size = new System.Drawing.Size(100, 50);
@@ -72,6 +70,8 @@ namespace SmoONE.UI.UserInfo
             this.listUserData.HeaderControlName = null;
             this.listUserData.Location = new System.Drawing.Point(0, 115);
             this.listUserData.Name = "listUserData";
+            this.listUserData.PageSizeTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(145)))), ((int)(((byte)(145)))));
+            this.listUserData.PageSizeTextSize = 11F;
             this.listUserData.Size = new System.Drawing.Size(300, 385);
             this.listUserData.TemplateControlName = "frmUserLayout";
             // 

@@ -28,8 +28,8 @@ namespace SmoONE.UI.Im
         [System.Diagnostics.DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            Smobiler.Core.Controls.ToolBarItem toolBarItem1 = new Smobiler.Core.Controls.ToolBarItem();
-            Smobiler.Core.Controls.ToolBarItem toolBarItem2 = new Smobiler.Core.Controls.ToolBarItem();
+            Smobiler.Core.Controls.ToolBarItem toolBarItem3 = new Smobiler.Core.Controls.ToolBarItem();
+            Smobiler.Core.Controls.ToolBarItem toolBarItem4 = new Smobiler.Core.Controls.ToolBarItem();
             this.title1 = new SmoONE.UI.Layout.Title();
             this.segmentedControl1 = new Smobiler.Core.Controls.SegmentedControl();
             this.listContact = new Smobiler.Core.Controls.ListView();
@@ -126,15 +126,15 @@ namespace SmoONE.UI.Im
             // toolBar1
             // 
             this.toolBar1.BackColor = System.Drawing.Color.White;
-            toolBarItem1.IconID = "lianxiren";
-            toolBarItem1.Name = "contact";
-            toolBarItem1.SelectIconID = "lianxiren";
-            toolBarItem2.IconID = "xiaoxi";
-            toolBarItem2.Name = "msg";
-            toolBarItem2.SelectIconID = "xiaoxi";
+            toolBarItem3.IconID = "lianxiren";
+            toolBarItem3.Name = "contact";
+            toolBarItem3.SelectIconID = "lianxiren";
+            toolBarItem4.IconID = "xiaoxi";
+            toolBarItem4.Name = "msg";
+            toolBarItem4.SelectIconID = "xiaoxi";
             this.toolBar1.Items.AddRange(new Smobiler.Core.Controls.ToolBarItem[] {
-            toolBarItem1,
-            toolBarItem2});
+            toolBarItem3,
+            toolBarItem4});
             this.toolBar1.Location = new System.Drawing.Point(0, 457);
             this.toolBar1.Name = "toolBar1";
             this.toolBar1.SelectBackColor = System.Drawing.Color.White;

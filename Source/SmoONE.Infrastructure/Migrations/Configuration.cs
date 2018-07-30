@@ -143,13 +143,13 @@ namespace SmoONE.Infrastructure.Migrations
 
             #region 可以注释的默认数据（都是通过主键区分）
             //在User表中添加默认数据
-            //context.Users.AddOrUpdate(
-            //    new User { U_ID = "13725731234", U_Name = "Apple", U_Pwd = DESEncrypt.Encrypt("123456"), U_Birthday = DateTime.Parse("1996-10-20 16:01:44"), U_CreateDate = DateTime.Now, U_Sex = 1, U_IsCheck = 1, U_IsCC = 0,U_DepID="Dep2016102517120001" },
-            //    new User { U_ID = "13725731235", U_Name = "Apple2", U_Pwd = DESEncrypt.Encrypt("123456"), U_Birthday = DateTime.Parse("1996-10-21 16:01:44"), U_CreateDate = DateTime.Now, U_Sex = 0, U_IsCheck = 0, U_IsCC = 0 },
-            //    new User { U_ID = "13725731236", U_Name = "Apple3", U_Pwd = DESEncrypt.Encrypt("123456"), U_Birthday = DateTime.Parse("1996-10-22 16:01:44"), U_CreateDate = DateTime.Now, U_Sex = 1, U_IsCheck = 0, U_IsCC = 1 },
-            //    new User { U_ID = "13725731237", U_Name = "Apple4", U_Pwd = DESEncrypt.Encrypt("123456"), U_Birthday = DateTime.Parse("1996-10-23 16:01:44"), U_CreateDate = DateTime.Now, U_Sex = 0, U_IsCheck = 1, U_IsCC = 0 },
-            //    new User { U_ID = "13725731238", U_Name = "Apple5", U_Pwd = DESEncrypt.Encrypt("123456"), U_Birthday = DateTime.Parse("1996-10-24 16:01:44"), U_CreateDate = DateTime.Now, U_Sex = 1, U_IsCheck = 1, U_IsCC = 1 }
-            //    );
+            context.Users.AddOrUpdate(
+                new User { U_ID = "13123456789", U_Name = "Smobiler", U_Pwd = DESEncrypt.Encrypt("123456"), U_Birthday = DateTime.Parse("1996-10-20 16:01:44"), U_CreateDate = DateTime.Now, U_Sex = 1, U_IsCheck = 1, U_IsCC = 1}
+                );
+            //在UserRole表中添加默认数据
+            context.UserRoles.AddOrUpdate(
+                new UserRole { ID = 1, UserID = "13123456789", RoleID = "Administrator" }
+                );
             ////在Leave表中添加默认数据
             //context.Leaves.AddOrUpdate(
             //    new Leave { L_ID = "Lv2016111012110001", L_CheckUsers = "13725731237,13725731238", L_CreateUser = "13725731235", L_CCTo = "13725731234", L_StartDate = DateTime.Now, L_CreateDate = DateTime.Now, L_EndDate = DateTime.Now.AddDays(3), L_LDay = 3, L_Reason = "测试1", L_Status = 0, L_TypeID = "SJ", L_UpdateDate = DateTime.Now },
@@ -173,14 +173,6 @@ namespace SmoONE.Infrastructure.Migrations
             //    new RB_Rows { R_ID = 6, RB_ID = "RB2016110816100001", R_Amount = 17.9M, R_Note = "明细4", R_TypeID = "FZ", R_CreateDate = DateTime.Now, R_ConsumeDate = DateTime.Now },
             //    new RB_Rows { R_ID = 7, RB_ID = "RB2016111620130001", R_Amount = 20, R_Note = "明细1", R_TypeID = "GL", R_CreateDate = DateTime.Now, R_ConsumeDate = DateTime.Now },
             //    new RB_Rows { R_ID = 8, RB_ID = "RB2016111620130001", R_Amount = 20, R_Note = "明细2", R_TypeID = "YJ", R_CreateDate = DateTime.Now, R_ConsumeDate = DateTime.Now }
-            //    );
-            //在UserRole表中添加默认数据
-            //context.UserRoles.AddOrUpdate(
-            //    new UserRole { ID = 1, UserID = "13725731234", RoleID = "Administrator" },
-            //    new UserRole { ID = 2, UserID = "13725731235", RoleID = "Employee" },
-            //    new UserRole { ID = 3, UserID = "13725731236", RoleID = "Employee" },
-            //    new UserRole { ID = 4, UserID = "13725731237", RoleID = "Employee" },
-            //    new UserRole { ID = 5, UserID = "13725731238", RoleID = "Administrator" }
             //    );
             ////在CC_Type_Template表中添加默认数据
             //context.CC_Type_Templates.AddOrUpdate(

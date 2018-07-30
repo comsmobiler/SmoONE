@@ -227,7 +227,7 @@ namespace SmoONE.UI.Work
                     if (string.IsNullOrWhiteSpace(menu.M_ParentID) == true)
                     {
                         //添加一级菜单
-                        grp.Items.Add(new IconMenuViewItem(menu.M_MenuID, menu.M_Portrait, menu.M_Description, menu.M_MenuID));
+                        grp.Items.Add(new IconMenuViewItem(menu.M_MenuID, menu.M_Portrait, menu.M_Description,"", menu.M_MenuID));
                         //添加二级菜单
                         List<Menu> listsecondMenu = AutofacConfig.userService.GetSubMenuByUserID(Client.Session["U_ID"].ToString(), menu.M_MenuID);
                         if (listsecondMenu.Count > 0)
@@ -236,7 +236,7 @@ namespace SmoONE.UI.Work
                             IconMenuViewGroup mvGroupItem = new IconMenuViewGroup(menuItem.M_Description);
                             foreach (Menu secondMenu in listsecondMenu)
                             {
-                                mvGroupItem.Items.Add(new IconMenuViewItem(secondMenu.M_MenuID, secondMenu.M_Portrait, secondMenu.M_Description, secondMenu.M_MenuID));
+                                mvGroupItem.Items.Add(new IconMenuViewItem(secondMenu.M_MenuID, secondMenu.M_Portrait, secondMenu.M_Description,"", secondMenu.M_MenuID));
                                 if (MenuGroupDict.ContainsKey(menu.M_MenuID) == false)
                                     MenuGroupDict.Add(menu.M_MenuID, mvGroupItem);
                             }
