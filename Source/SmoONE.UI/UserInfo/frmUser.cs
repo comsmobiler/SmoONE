@@ -276,7 +276,7 @@ namespace SmoONE.UI.UserInfo
                 }
                 else
                 {
-                    e.SaveFile(e.ResourceID + ".png");
+                    e.SaveFile(e.ResourceID);
                     
                     //imgPortrait.ResourceID = e.ResourceID;
                    

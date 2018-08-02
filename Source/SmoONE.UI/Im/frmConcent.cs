@@ -42,7 +42,7 @@ namespace SmoONE.UI.Im
                     string portraitUri = "";
                     if (userDetailDto != null)
                     {
-                        portraitUri = MobileResourceManager.DefaultImagePath + userDetailDto.U_Portrait + ".PNG";
+                        portraitUri =System.IO.Path.Combine( MobileResourceManager.DefaultImagePath , userDetailDto.U_Portrait);
                     }
                     im1.InitialToken(tokenuser, tokenuser, portraitUri);
                 }
@@ -153,7 +153,7 @@ namespace SmoONE.UI.Im
             {                
                 user.UserName = userDetailDto.U_Name;
                 // user.PortraitUri = ".\\Image\\" + userDetailDto.U_Portrait + ".PNG";
-                user.PortraitUri = MobileResourceManager.DefaultImagePath + userDetailDto.U_Portrait + ".PNG";
+                user.PortraitUri = System.IO.Path.Combine(MobileResourceManager.DefaultImagePath, userDetailDto.U_Portrait);
             }
             //·µ»ØIMUserEntry
             e.Result = user;

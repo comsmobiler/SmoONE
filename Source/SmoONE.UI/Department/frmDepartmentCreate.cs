@@ -268,13 +268,13 @@ namespace SmoONE.UI.Department
             {
                 if (imgPortrait.ResourceID.Trim().Length > 0 & string.IsNullOrEmpty(D_Portrait)==false )
                 {
-                    e.SaveFile(D_Portrait+".png");
+                    e.SaveFile(D_Portrait);
                     imgPortrait.ResourceID = D_Portrait;
                     imgPortrait.Refresh();
                 }
                 else
                 {
-                    e.SaveFile(e.ResourceID + ".png");
+                    e.SaveFile(e.ResourceID);
                     D_Portrait = e.ResourceID;
                     imgPortrait.ResourceID = e.ResourceID;
                     imgPortrait.Refresh();

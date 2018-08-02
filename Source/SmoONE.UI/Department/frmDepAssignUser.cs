@@ -746,13 +746,13 @@ namespace SmoONE.UI.Department
 
                 if (imgPortrait.ResourceID.Trim().Length > 0 & string.IsNullOrEmpty(department.Dep_Icon) == false)
                 {
-                    e.SaveFile(department.Dep_Icon + ".png");
+                    e.SaveFile(department.Dep_Icon);
                     imgPortrait.ResourceID = department.Dep_Icon;
                     imgPortrait.Refresh();
                 }
                 else
                 {
-                    e.SaveFile(e.ResourceID + ".png");
+                    e.SaveFile(e.ResourceID);
                     department.Dep_Icon = e.ResourceID;
                     imgPortrait.ResourceID = e.ResourceID;
                     imgPortrait.Refresh();

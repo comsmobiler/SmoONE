@@ -32,7 +32,7 @@ namespace SmoONE.UI.Layout
                     if (((SmoONE.UI.Im.frmAddConcentOrGroup)this.Form).im1 != null)
                     {
                         //添加联系人
-                        ((SmoONE.UI.Im.frmAddConcentOrGroup)this.Form).im1.CreateUser(cInputDto.C_USER, lblUser.BindDisplayValue.ToString(), MobileResourceManager.DefaultImagePath +imgPortrait .BindDisplayValue .ToString ()+".png");
+                        ((SmoONE.UI.Im.frmAddConcentOrGroup)this.Form).im1.CreateUser(cInputDto.C_USER, lblUser.BindDisplayValue.ToString(),System.IO.Path.Combine( MobileResourceManager.DefaultImagePath ,imgPortrait .BindDisplayValue .ToString ()));
                     }
                     this.Form .ShowResult = ShowResult.Yes;
                     this.Form .Close();
