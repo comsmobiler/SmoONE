@@ -1,56 +1,52 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-public partial class frmSetting : Form
+namespace SmoONE.UI
 {
-    private Smobiler.Core.Setting mSetting = null;
-
-
-    public frmSetting()
+    public partial class frmSetting : Form
     {
-        InitializeComponent();
-        mSetting = new Smobiler.Core.Setting();
-    }
+        private Smobiler.Core.Setting mSetting = null;
 
-    private void frmSetting_Load(object sender, EventArgs e)
-    {
-        try
+
+        public frmSetting()
         {
-            this.gridMain.SelectedObject = mSetting;
+            InitializeComponent();
+            mSetting = new Smobiler.Core.Setting();
         }
-        catch (Exception ex)
-        {
-            MessageBox.Show(ex.Message);
-            this.Close();
-        }
-    }
 
-    private void btnSave_Click(object sender, EventArgs e)
-    {
-        try
+        private void frmSetting_Load(object sender, EventArgs e)
         {
-            mSetting.SaveData();
-            if (MessageBox.Show("保存成功，是否重新启动服务", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+            try
             {
-                this.DialogResult = DialogResult.Yes;
+                this.gridMain.SelectedObject = mSetting;
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                this.Close();
+            }
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                mSetting.SaveData();
+                if (MessageBox.Show("保存成功，是否重新启动服务", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+                {
+                    this.DialogResult = DialogResult.Yes;
+                }
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
             this.Close();
         }
-        catch (Exception ex)
-        {
-            MessageBox.Show(ex.Message);
-        }
-    }
-
-    private void btnCancel_Click(object sender, EventArgs e)
-    {
-        this.Close();
     }
 }

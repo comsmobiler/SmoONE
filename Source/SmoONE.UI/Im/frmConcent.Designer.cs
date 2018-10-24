@@ -158,6 +158,7 @@ namespace SmoONE.UI.Im
             this.im1.LoadGroupInfo += new Smobiler.Plugins.RongIM.IMLoadGroupInfoHandler(this.im1_LoadGroupInfo);
             this.im1.LoadGroupMembers += new Smobiler.Plugins.RongIM.IMLoadGroupMembersHandler(this.im1_LoadGroupMembers);
             this.im1.TokenExpired += new Smobiler.Plugins.RongIM.IMTokenExpiredHandler(this.im1_TokenExpired);
+            this.im1.UnReadMessage += new Smobiler.Plugins.RongIM.IMUnReadMessageHandler(this.im1_UnReadMessage);
             // 
             // frmConcent
             // 

@@ -55,12 +55,9 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Smobiler.Core.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=8c6a0bf97233f4f9, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Smobiler Designer\Library\Smobiler.Core.Controls.dll</HintPath>
-    </Reference>
-    <Reference Include="Smobiler.Device, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e0b1d6c313d28ffc, processorArchitecture=MSIL" />
-    <Reference Include="Smobiler.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9301bc54ca0d7a69, processorArchitecture=MSIL" />
+    <Reference Include="Smobiler.Core.Controls" />
+    <Reference Include="Smobiler.Device" />
+    <Reference Include="Smobiler.Plugins" />
     <Reference Include="Smobiler.Utility" />
     <Reference Include="Smobiler.Core" />
     <Reference Include="System" />
@@ -294,6 +291,18 @@
     </Compile>
     <Compile Include="FileUp\frmFileDetail.Designer.cs">
       <DependentUpon>frmFileDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGenerateQRcode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGenerateQRcode.Designer.cs">
+      <DependentUpon>frmGenerateQRcode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHelp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHelp.Designer.cs">
+      <DependentUpon>frmHelp.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogon.cs">
       <SubType>Component</SubType>
@@ -577,6 +586,16 @@
     <Compile Include="Leave\frmLeaveDetail.Designer.cs">
       <DependentUpon>frmLeaveDetail.cs</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <Compile Include="RB\frmRBCreate.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -825,6 +844,12 @@
     <EmbeddedResource Include="FileUp\frmFileDetail.resx">
       <DependentUpon>frmFileDetail.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmGenerateQRcode.resx">
+      <DependentUpon>frmGenerateQRcode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHelp.resx">
+      <DependentUpon>frmHelp.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogon.resx">
       <DependentUpon>frmLogon.cs</DependentUpon>
     </EmbeddedResource>
@@ -969,6 +994,10 @@
     <EmbeddedResource Include="Leave\frmLeaveDetail.resx">
       <DependentUpon>frmLeaveDetail.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="RB\frmRBCreate.resx">
       <DependentUpon>frmRBCreate.cs</DependentUpon>
     </EmbeddedResource>
@@ -1039,6 +1068,10 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SmoONE.Application\SmoONE.Application.csproj">

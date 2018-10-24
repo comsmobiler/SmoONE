@@ -1,17 +1,17 @@
-##  SmoONE 4.4
-### °ì¹«¹ÜÀíÏµÍ³
-> SmoONEÊÇÍ¨¹ıSmobiler¿ª·¢µÄÒ»¿î°ì¹«¹ÜÀíÏµÍ³
+##  SmoONE 4.6
+### åŠå…¬ç®¡ç†ç³»ç»Ÿ
+> SmoONEæ˜¯é€šè¿‡Smobilerå¼€å‘çš„ä¸€æ¬¾åŠå…¬ç®¡ç†ç³»ç»Ÿ
 
-1. ¸ÃÔ´ÂëÒÑ´ò°ü³Éapp£¬¿Éµã»÷ÕâÀïÏÂÔØ½øĞĞ³õ²½ÌåÑé (https://apps.smobiler.com/)
-2. µã»÷²é¿´Smobiler Designer/ClientÏÂÔØ(http://www.smobiler.com/download.html)
-3. µã»÷²é¿´Ò»¼üÑ§Ï°(http://www.smobiler.com/studyPC.aspx)
-4. µã»÷²é¿´Smobiler¹ÙÍø (http://www.smobiler.com/)
-5. Èô³öÏÖÍ¼±êÎŞ·¨ÏÔÊ¾µÄÇé¿ö£¬ÊÇÒòÎª¿ªÆôÁË·À»ğÇ½£¬µã»÷²é¿´ÉèÖÃ(http://www.smobiler.com/forum.php?mod=viewthread&tid=12)
-6. QQÈº£º308522976
+1. è¯¥æºç å·²æ‰“åŒ…æˆappï¼Œå¯ç‚¹å‡»è¿™é‡Œä¸‹è½½è¿›è¡Œåˆæ­¥ä½“éªŒ (https://apps.smobiler.com/)
+2. ç‚¹å‡»æŸ¥çœ‹Smobiler Designer/Clientä¸‹è½½(http://www.smobiler.com/download.html)
+3. ç‚¹å‡»æŸ¥çœ‹ä¸€é”®å­¦ä¹ (http://www.smobiler.com/studyPC.aspx)
+4. ç‚¹å‡»æŸ¥çœ‹Smobilerå®˜ç½‘ (http://www.smobiler.com/)
+5. è‹¥å‡ºç°å›¾æ ‡æ— æ³•æ˜¾ç¤ºçš„æƒ…å†µï¼Œæ˜¯å› ä¸ºå¼€å¯äº†é˜²ç«å¢™ï¼Œç‚¹å‡»æŸ¥çœ‹è®¾ç½®(http://www.smobiler.com/forum.php?mod=viewthread&tid=12)
+6. QQç¾¤ï¼š308522976
 
-¸ÃÏîÄ¿¿Í»§¶Ë°æ±¾Îª4.4.0£¬design°æ±¾Îª440.1526268462£¬ÏîÄ¿Ê¹ÓÃµÄdesignºÍ¿Í»§¶Ë°æ±¾±ØĞë±£³ÖÒ»ÖÂ£¡£¡£¡
+è¯¥é¡¹ç›®å®¢æˆ·ç«¯ç‰ˆæœ¬ä¸º4.6.0ï¼Œdesignç‰ˆæœ¬ä¸º460ï¼Œé¡¹ç›®ä½¿ç”¨çš„designå’Œå®¢æˆ·ç«¯ç‰ˆæœ¬å¿…é¡»ä¿æŒä¸€è‡´ï¼ï¼ï¼
 
-Èç¹ûĞèÒª4.3°æ±¾£¬ÇëÊ¹ÓÃ4.3·ÖÖ§£¡ https://github.com/comsmobiler/SmoONE/tree/4.3
+å¦‚æœéœ€è¦4.3ç‰ˆæœ¬ï¼Œè¯·ä½¿ç”¨4.3åˆ†æ”¯ï¼ https://github.com/comsmobiler/SmoONE/tree/4.3
 
 
 (https://img.shields.io/github/license/mashape/apistatus.svg)

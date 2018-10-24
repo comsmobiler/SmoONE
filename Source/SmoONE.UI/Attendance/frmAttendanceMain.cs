@@ -122,18 +122,21 @@ namespace SmoONE.UI.Attendance
                 if ((ATMainState)Enum.Parse(typeof(ATMainState), enter.ToString()) == ATMainState.统计查看)        //统计页面进入查看
                 {
                     List<ALDto> listStats = AutofacConfig.attendanceService.GetALByUserAndDate(UserID, Convert.ToDateTime(DayTime));
-                    CommutingType = listStats[0].AL_CommutingType;      //上下班类型
-                    if ((WorkTimeType)Enum.Parse(typeof(WorkTimeType), listStats[0].AL_CommutingType) == WorkTimeType.一天一上下班)            //一天一上下班
+                    if (listStats != null && listStats.Count > 0)
                     {
-                        table.Rows.Add("4", "shangban2", "上班", listStats[0].AL_OnTime.ToString("HH:mm"), null, null, "未开始");
-                        table.Rows.Add("5", "xiaban2", "下班", listStats[1].AL_OnTime.ToString("HH:mm"), null, null, "未开始");
-                    }
-                    else               //一天两上下班
-                    {
-                        table.Rows.Add("0", "shangban2", "上午上班", listStats[0].AL_OnTime.ToString("HH:mm"), null, null, "未开始");
-                        table.Rows.Add("1", "gongzuozhong2", "上午下班", listStats[1].AL_OnTime.ToString("HH:mm"), null, null, "未开始");
-                        table.Rows.Add("2", "gongzuozhong2", "下午上班", listStats[2].AL_OnTime.ToString("HH:mm"), null, null, "未开始");
-                        table.Rows.Add("3", "xiaban2", "下午下班", listStats[3].AL_OnTime.ToString("HH:mm"), null, null, "未开始");
+                        CommutingType = listStats[0].AL_CommutingType;      //上下班类型
+                        if ((WorkTimeType)Enum.Parse(typeof(WorkTimeType), listStats[0].AL_CommutingType) == WorkTimeType.一天一上下班)            //一天一上下班
+                        {
+                            table.Rows.Add("4", "shangban2", "上班", listStats[0].AL_OnTime.ToString("HH:mm"), null, null, "未开始");
+                            table.Rows.Add("5", "xiaban2", "下班", listStats[1].AL_OnTime.ToString("HH:mm"), null, null, "未开始");
+                        }
+                        else               //一天两上下班
+                        {
+                            table.Rows.Add("0", "shangban2", "上午上班", listStats[0].AL_OnTime.ToString("HH:mm"), null, null, "未开始");
+                            table.Rows.Add("1", "gongzuozhong2", "上午下班", listStats[1].AL_OnTime.ToString("HH:mm"), null, null, "未开始");
+                            table.Rows.Add("2", "gongzuozhong2", "下午上班", listStats[2].AL_OnTime.ToString("HH:mm"), null, null, "未开始");
+                            table.Rows.Add("3", "xiaban2", "下午下班", listStats[3].AL_OnTime.ToString("HH:mm"), null, null, "未开始");
+                        }
                     }
                 }
                 else        //进入签到页面
