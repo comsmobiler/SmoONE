@@ -251,11 +251,20 @@ namespace SmoONE.UI.UserInfo
         /// <param name="e"></param>
         private void toolBar_ToolbarItemClick(object sender, ToolbarClickEventArgs e)
         {
-            if (!e.Name.Equals("Me"))
+            toolbarItemName = e.Name;
+            switch (e.Name)
             {
-                toolbarItemName = e.Name;
-                Close();
+                case "Me":
+                    break;
+                default:
+                    this.Close();
+                    break;
             }
+            //if (!e.Name.Equals("Me"))
+            //{
+            //    toolbarItemName = e.Name;
+            //    Close();
+            //}
         }
         /// <summary>
         /// 修改用户头像
