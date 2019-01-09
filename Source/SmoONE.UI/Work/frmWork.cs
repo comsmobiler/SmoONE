@@ -139,11 +139,9 @@ namespace SmoONE.UI.Work
             {
                 switch (toolbarItemName)
                 {
-                    case "Work":
+                    case "":
+                        this.Close();
                         break;
-                    //case "":
-                    //    this.Close();
-                    //    break;
                     case "Me":
                         frmUser frm = new frmUser();
                         this.Show(frm, (MobileForm sender1, object args) =>
