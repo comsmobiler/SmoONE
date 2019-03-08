@@ -6,6 +6,8 @@ IDE为VisualStudio，开发平台为Smobiler，SmobilerDesigner通过实现.NET�
 SmoONE is an office management solution for APPs, developed by .NET. The development environment is VisualStudio, the development platform is Smobile  
 
 ![登录页](./Resource/logon.gif)    
+### Gitee下载地址
+https://gitee.com/smobiler/SmoONE
 
 ### 环境要求
 
