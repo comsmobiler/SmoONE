@@ -694,12 +694,14 @@ namespace SmoONE.UI.Leave
 
                 if (imgL.ResourceID.Trim().Length > 0)
                 {
-                    e.SaveFile(imgL.ResourceID);//保存图片文件到本地运行项目的image文件夹中
+                    e.SaveFile(imgL.ResourceID, MobileResourceManager.DefaultImagePath);
+                    //  e.SaveFile(imgL.ResourceID);//保存图片文件到本地运行项目的image文件夹中
                     imgL.Refresh();//当图片上传文件名相同时，刷新界面图片内容
                 }
                 else
                 {
-                    e.SaveFile(e.ResourceID);//保存图片文件到本地运行项目的image文件夹中
+                    e.SaveFile(e.ResourceID, MobileResourceManager.DefaultImagePath);
+                    //e.SaveFile(e.ResourceID);//保存图片文件到本地运行项目的image文件夹中
                     imgL.ResourceID = e.ResourceID;
                 }
             }

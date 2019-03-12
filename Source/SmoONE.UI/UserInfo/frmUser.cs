@@ -285,8 +285,8 @@ namespace SmoONE.UI.UserInfo
                 }
                 else
                 {
-                    e.SaveFile(e.ResourceID);
-                    
+                    //  e.SaveFile(e.ResourceID);
+                    e.SaveFile(e.ResourceID,MobileResourceManager.DefaultImagePath );
                     //imgPortrait.ResourceID = e.ResourceID;
                    
                     //imgPortrait.Refresh();
