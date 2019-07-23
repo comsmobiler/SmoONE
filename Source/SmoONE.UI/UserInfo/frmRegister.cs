@@ -152,7 +152,7 @@ namespace SmoONE.UI.UserInfo
                     List<Role> role = AutofacConfig.userService.GetRoleByUserID(Tel);
                     Client.Session["U_ID"] = Tel;
                     Client.Session["Roler"] = role;
-                    Close();//关闭当前界面
+                  //  Close();//关闭当前界面
                     frmWork frmWork = new frmWork();//跳转到工作界面
                     Show(frmWork);
                 }

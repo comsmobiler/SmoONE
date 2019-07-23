@@ -40,7 +40,7 @@ namespace SmoONE.UI.UserInfo
                         List<Role> role = AutofacConfig.userService.GetRoleByUserID(Tel);
                         Client.Session["U_ID"] = Tel;
                         Client.Session["Roler"] = role;
-                        Close();
+                     //   Close();
                         frmWork frmWork = new frmWork();
                         Show(frmWork);
                     }
@@ -51,7 +51,7 @@ namespace SmoONE.UI.UserInfo
                 }
                 else
                 {
-                    Close();
+                   // Close();
                     frmRegister frmRegister = new frmRegister();
                     frmRegister.Tel = Tel;
                     frmRegister.VCode = code;
