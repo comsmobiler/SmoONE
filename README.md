@@ -1,4 +1,4 @@
-##  SmoONE 4.6
+##  SmoONE 4.9
 ### 办公管理系统
 
 SmoONE是通过Smobiler开发的一款办公管理系统。  
