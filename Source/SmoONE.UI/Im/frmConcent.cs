@@ -138,7 +138,7 @@ namespace SmoONE.UI.Im
                 group.GroupName = CGroupDto.G_NAME;
 
             }
-            group.PortraitUri = MobileResourceManager .DefaultImagePath + "group.PNG";
+            group.PortraitUri = System.IO.Path.Combine(MobileResourceManager.DefaultImagePath, "group.PNG");
             e.Result = group;
         }
         private void  im1_LoadUserInfo(object sender, IMLoadUserInfoArgs e)
