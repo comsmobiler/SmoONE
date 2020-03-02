@@ -1,4 +1,4 @@
-##  SmoONE 4.9
+##  SmoONE 5.0
 ### 办公管理系统
 
 SmoONE是通过Smobiler开发的一款办公管理系统。  
@@ -50,7 +50,7 @@ SmobilerDesigner版本：460及以上([下载并安装SmobilerDesigner](https://
 3. 点击查看一键学习(http://www.smobiler.com/studyPC.aspx)
 4. 点击查看Smobiler官网 (http://www.smobiler.com/)
 5. 若出现图标无法显示的情况，是因为开启了防火墙，点击查看设置(http://www.smobiler.com/forum.php?mod=viewthread&tid=12)
-6. QQ群：308522976
+6. QQ技术交流群： 一群：308522976(已满) 二群：930868351
 
 该项目客户端版本为4.6.0，design版本为460，项目使用的design和客户端版本必须保持一致！！！
 
