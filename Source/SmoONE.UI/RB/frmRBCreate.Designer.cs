@@ -116,8 +116,6 @@ namespace SmoONE.UI.RB
             // title1
             // 
             this.title1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.title1.Controls.AddRange(new Smobiler.Core.Controls.MobileControl[] {
-            this.listRBRowData});
             this.title1.Direction = Smobiler.Core.Controls.LayoutDirection.Row;
             this.title1.Dock = System.Windows.Forms.DockStyle.Top;
             this.title1.Name = "title1";
