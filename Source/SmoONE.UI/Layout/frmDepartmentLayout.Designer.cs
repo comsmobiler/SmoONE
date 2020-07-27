@@ -62,7 +62,7 @@ namespace SmoONE.UI.Layout
             this.lblId.Location = new System.Drawing.Point(53, 0);
             this.lblId.Name = "lblId";
             this.lblId.Padding = new Smobiler.Core.Controls.Padding(0F, 10F, 10F, 0F);
-            this.lblId.Size = new System.Drawing.Size(256, 30);
+            this.lblId.Size = new System.Drawing.Size(247, 30);
             this.lblId.VerticalAlignment = Smobiler.Core.Controls.VerticalAlignment.Top;
             this.lblId.ZIndex = 1;
             // 
@@ -74,7 +74,7 @@ namespace SmoONE.UI.Layout
             this.label1.Location = new System.Drawing.Point(53, 29);
             this.label1.Name = "label1";
             this.label1.Padding = new Smobiler.Core.Controls.Padding(0F, 0F, 10F, 10F);
-            this.label1.Size = new System.Drawing.Size(256, 30);
+            this.label1.Size = new System.Drawing.Size(247, 30);
             this.label1.ZIndex = 2;
             // 
             // frmDepartmentLayout
