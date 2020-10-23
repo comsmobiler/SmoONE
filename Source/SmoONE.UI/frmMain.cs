@@ -81,6 +81,11 @@ partial class frmMain
             this.txtTcpPort.Text = server.Setting.TcpServerPort.ToString();
             //服务HTTP端口，默认为2324  
             this.txtHTTPPort.Text = server.Setting.HttpServerPort.ToString();
+            //绑定事件
+            server.SessionStart += new Smobiler.Core.SmobilerSessionEventHandler(MobileGlobal.OnSessionStart);
+            server.SessionStop += new Smobiler.Core.SmobilerSessionEventHandler(MobileGlobal.OnSessionStop);
+            server.SessionConnect += new Smobiler.Core.SmobilerSessionEventHandler(MobileGlobal.OnSessionConnect);
+            server.ClientPushOpened += new Smobiler.Core.ClientPushOpenedEventHandler(MobileGlobal.OnPushCallBack);
             //启用服务
             server.StartServer();
             MobileGlobal.OnServerStart(server);
@@ -105,7 +110,21 @@ partial class frmMain
             server.StartServer();
         }
     }
-
+    /// <summary>
+    /// 停止服务
+    /// </summary>
+    private void StopServer()
+    {
+        if (server != null)
+        {
+            server.SessionStart -= new Smobiler.Core.SmobilerSessionEventHandler(MobileGlobal.OnSessionStart);
+            server.SessionStop -= new Smobiler.Core.SmobilerSessionEventHandler(MobileGlobal.OnSessionStop);
+            server.SessionConnect -= new Smobiler.Core.SmobilerSessionEventHandler(MobileGlobal.OnSessionConnect);
+            server.ClientPushOpened -= new Smobiler.Core.ClientPushOpenedEventHandler(MobileGlobal.OnPushCallBack);
+            server.StopServer();
+            MobileGlobal.OnServerStop(server);
+        }
+    }
     /// <summary>
     /// 在下拉框选择变更事件重新生成二维码
     /// </summary>
@@ -133,7 +152,7 @@ partial class frmMain
             frmSetting setting = new frmSetting();
             if (setting.ShowDialog() == DialogResult.Yes)
             {
-                server.StopServer();
+                StopServer();
                 server.Setting.InitialData();
                 StartServer();
                 qrcodeControl.SetServerInfo(this.txtNetAddress.Text, server.Setting.TcpServerPort, server.Setting.HttpServerPort, this.txtName.Text);
@@ -159,6 +178,7 @@ partial class frmMain
     /// <param name="e"></param>
     private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
     {
+        StopServer();
         SmoONE.UI.Properties.Settings.Default.Save();
     }
 
