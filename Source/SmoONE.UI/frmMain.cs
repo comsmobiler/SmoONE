@@ -83,6 +83,7 @@ partial class frmMain
             this.txtHTTPPort.Text = server.Setting.HttpServerPort.ToString();
             //启用服务
             server.StartServer();
+            MobileGlobal.OnServerStart(server);
         }
         catch (System.Net.HttpListenerException ex)
         {
