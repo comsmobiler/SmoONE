@@ -16,8 +16,8 @@ public class MobileGlobal
     /// </summary>
     /// <param name="server"></param>
     public static void OnServerStart(MobileServer server)
-    {
-        AutomapperConfig.Init();
+    {//若是使用Smobiler Service部署，请去除下面注释
+     // AutomapperConfig.Init();
     }
     /// <summary>
     /// 在服务停止时触发
@@ -62,6 +62,6 @@ public class MobileGlobal
     /// <param name="e"></param>
     public static void OnPushCallBack(object sender, ClientPushOpenedEventArgs e)
     {
-
+     
     }
 }
